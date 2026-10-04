@@ -13,18 +13,18 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --bg-dark: #121212;
       --bg-card: #1c1c1e;
-      --bg-elevated: #26262a;
+      --bg-elevated: #28282c;
       --accent-gold: #d4af37;
-      --accent-gold-hover: #f3c63f;
-      --text-main: #f5f5f7;
+      --accent-gold-light: rgba(212, 175, 55, 0.15);
+      --text-main: #ffffff;
       --text-muted: #a1a1a6;
-      --border-color: #2c2c2e;
+      --border-color: #333336;
       --whatsapp-green: #25d366;
       --radius-lg: 16px;
       --radius-sm: 8px;
@@ -40,7 +40,7 @@
     body {
       background-color: var(--bg-dark);
       color: var(--text-main);
-      padding-bottom: 80px;
+      padding-bottom: 90px;
     }
 
     h1, h2, h3, .brand-font {
@@ -51,10 +51,10 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(18, 18, 18, 0.9);
-      backdrop-filter: blur(10px);
+      background: rgba(18, 18, 18, 0.95);
+      backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border-color);
-      padding: 16px 20px;
+      padding: 14px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -70,46 +70,46 @@
     .cart-btn {
       position: relative;
       background: var(--bg-elevated);
-      border: 1px solid var(--border-color);
+      border: 1px solid var(--accent-gold);
       color: var(--text-main);
-      padding: 8px 14px;
+      padding: 8px 16px;
       border-radius: var(--radius-sm);
       cursor: pointer;
       display: flex;
       align-items: center;
-      gap: 6px;
-      font-weight: 600;
+      gap: 8px;
+      font-weight: 700;
     }
 
     .cart-count {
       background: var(--accent-gold);
       color: #000;
-      font-size: 0.75rem;
-      font-weight: 700;
-      padding: 2px 6px;
-      border-radius: 10px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 12px;
     }
 
     .hero {
       position: relative;
-      height: 260px;
-      background: linear-gradient(180deg, rgba(18,18,18,0.3) 0%, rgba(18,18,18,1) 100%),
+      height: 240px;
+      background: linear-gradient(180deg, rgba(18,18,18,0.2) 0%, rgba(18,18,18,1) 100%),
                   url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80') center/cover;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      padding: 24px 20px;
+      padding: 20px;
     }
 
     .hero h1 {
       font-size: 2rem;
       color: #fff;
-      margin-bottom: 4px;
     }
 
     .hero p {
       color: var(--accent-gold);
       font-size: 0.95rem;
+      font-weight: 600;
     }
 
     .container {
@@ -118,32 +118,13 @@
       padding: 20px;
     }
 
-    .info-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-lg);
-      padding: 16px;
-      margin-bottom: 24px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 12px;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-
-    .info-item span {
-      display: block;
-      color: var(--text-main);
-      font-weight: 600;
-      margin-bottom: 2px;
-    }
-
+    /* Prominent Top Filter Tabs */
     .categories {
       display: flex;
       gap: 10px;
       overflow-x: auto;
       padding-bottom: 12px;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
       scrollbar-width: none;
     }
 
@@ -153,14 +134,14 @@
 
     .cat-btn {
       background: var(--bg-card);
-      border: 1px solid var(--border-color);
+      border: 2px solid var(--border-color);
       color: var(--text-muted);
-      padding: 8px 18px;
-      border-radius: 20px;
+      padding: 10px 20px;
+      border-radius: 24px;
       white-space: nowrap;
       cursor: pointer;
-      font-weight: 600;
-      font-size: 0.85rem;
+      font-weight: 700;
+      font-size: 0.9rem;
       transition: all 0.2s ease;
     }
 
@@ -168,13 +149,14 @@
       background: var(--accent-gold);
       color: #000;
       border-color: var(--accent-gold);
+      box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
     }
 
     .section-title {
       font-size: 1.4rem;
       margin-bottom: 16px;
       color: var(--accent-gold);
-      border-bottom: 1px solid var(--border-color);
+      border-bottom: 2px solid var(--border-color);
       padding-bottom: 8px;
     }
 
@@ -189,21 +171,21 @@
       background: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: var(--radius-lg);
-      padding: 16px;
+      padding: 18px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
 
     .menu-card h3 {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       margin-bottom: 6px;
     }
 
     .menu-card p {
       color: var(--text-muted);
-      font-size: 0.825rem;
-      margin-bottom: 12px;
+      font-size: 0.85rem;
+      margin-bottom: 14px;
       line-height: 1.4;
     }
 
@@ -215,20 +197,20 @@
     }
 
     .price {
-      font-weight: 700;
+      font-weight: 800;
       color: var(--accent-gold);
-      font-size: 1rem;
+      font-size: 1.1rem;
     }
 
     .add-btn {
       background: var(--bg-elevated);
-      border: 1px solid var(--border-color);
-      color: var(--text-main);
-      padding: 6px 14px;
+      border: 1px solid var(--accent-gold);
+      color: var(--accent-gold);
+      padding: 8px 16px;
       border-radius: var(--radius-sm);
       cursor: pointer;
-      font-weight: 600;
-      transition: background 0.2s;
+      font-weight: 700;
+      transition: all 0.2s;
     }
 
     .add-btn:hover {
@@ -243,7 +225,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0,0,0,0.8);
+      background: rgba(0,0,0,0.85);
       z-index: 200;
       display: none;
       justify-content: flex-end;
@@ -277,7 +259,7 @@
       background: none;
       border: none;
       color: var(--text-muted);
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       cursor: pointer;
     }
 
@@ -308,10 +290,11 @@
       background: var(--bg-elevated);
       border: none;
       color: var(--text-main);
-      width: 24px;
-      height: 24px;
+      width: 28px;
+      height: 28px;
       border-radius: 4px;
       cursor: pointer;
+      font-weight: bold;
     }
 
     .cart-total {
@@ -320,8 +303,8 @@
       border-top: 1px solid var(--border-color);
       display: flex;
       justify-content: space-between;
-      font-size: 1.1rem;
-      font-weight: 700;
+      font-size: 1.2rem;
+      font-weight: 800;
     }
 
     .checkout-btn {
@@ -331,42 +314,52 @@
       border: none;
       padding: 14px;
       border-radius: var(--radius-sm);
-      font-weight: 700;
+      font-weight: 800;
       margin-top: 16px;
       cursor: pointer;
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 8px;
+      font-size: 1rem;
     }
 
+    /* Highly Visible Bottom Navigation Tabs */
     .nav-bar {
       position: fixed;
       bottom: 0;
       left: 0;
       width: 100%;
-      background: var(--bg-card);
-      border-top: 1px solid var(--border-color);
+      background: #18181a;
+      border-top: 2px solid var(--border-color);
       display: flex;
       justify-content: space-around;
-      padding: 12px 0;
+      padding: 8px 12px;
       z-index: 90;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.5);
     }
 
     .nav-item {
+      flex: 1;
       background: none;
       border: none;
       color: var(--text-muted);
-      font-size: 0.75rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 10px 0;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 4px;
       cursor: pointer;
+      border-radius: var(--radius-sm);
+      transition: all 0.2s ease;
     }
 
     .nav-item.active {
       color: var(--accent-gold);
+      background: var(--accent-gold-light);
+      border: 1px solid var(--accent-gold);
     }
 
     /* Form Styles */
@@ -378,16 +371,18 @@
       display: block;
       font-size: 0.85rem;
       color: var(--text-muted);
-      margin-bottom: 4px;
+      margin-bottom: 6px;
+      font-weight: 600;
     }
 
     .form-group input, .form-group select {
       width: 100%;
-      padding: 10px;
+      padding: 12px;
       background: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: var(--radius-sm);
       color: var(--text-main);
+      font-size: 0.95rem;
     }
 
     .btn-gold {
@@ -395,10 +390,38 @@
       background: var(--accent-gold);
       color: #000;
       border: none;
+      padding: 14px;
+      border-radius: var(--radius-sm);
+      font-weight: 800;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .contact-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+
+    .contact-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
       padding: 12px;
       border-radius: var(--radius-sm);
       font-weight: 700;
-      cursor: pointer;
+      text-decoration: none;
+      margin-top: 12px;
+    }
+
+    .btn-call {
+      background: var(--bg-elevated);
+      color: var(--text-main);
+      border: 1px solid var(--accent-gold);
     }
 
     .hidden {
@@ -414,7 +437,7 @@
     </div>
     <div class="header-actions">
       <button class="cart-btn" onclick="toggleCart()">
-        Cart <span class="cart-count" id="cartCount">0</span>
+        🛒 Cart <span class="cart-count" id="cartCount">0</span>
       </button>
     </div>
   </header>
@@ -425,29 +448,15 @@
   </div>
 
   <div class="container">
-    <div class="info-card">
-      <div class="info-item">
-        <span>Location</span>
-        Wuse 2, Abuja (Opp. Glo Office)
-      </div>
-      <div class="info-item">
-        <span>Hours</span>
-        Mon - Sun: 10:00 AM - 11:00 PM
-      </div>
-      <div class="info-item">
-        <span>Average Pricing</span>
-        From ₦5,000 per meal
-      </div>
-    </div>
 
-    <!-- Main View: Menu -->
+    <!-- Tab 1: Menu View -->
     <main id="menuView">
       <div class="categories" id="categoryList"></div>
       <h2 class="section-title" id="currentCategoryTitle">All Items</h2>
       <div class="menu-grid" id="menuGrid"></div>
     </main>
 
-    <!-- Reservation View -->
+    <!-- Tab 2: Reservation View -->
     <section id="reservationView" class="hidden">
       <h2 class="section-title">Reserve a Table</h2>
       <form id="reservationForm" onsubmit="handleReservation(event)" style="background: var(--bg-card); padding: 20px; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
@@ -475,16 +484,44 @@
           <label for="resTime">Time</label>
           <input type="time" id="resTime" required>
         </div>
-        <button type="submit" class="btn-gold" style="margin-top: 10px;">Send Reservation Request via WhatsApp</button>
+        <button type="submit" class="btn-gold" style="margin-top: 10px;">Send Reservation via WhatsApp</button>
       </form>
     </section>
+
+    <!-- Tab 3: Contact & Location View -->
+    <section id="contactView" class="hidden">
+      <h2 class="section-title">Contact & Location</h2>
+      
+      <div class="contact-card">
+        <h3>📍 Address</h3>
+        <p style="color: var(--text-muted); margin-top: 6px;">Plot 118 Aminu Kano Crescent, Wuse 2, Abuja (Directly opposite Glo Office)</p>
+      </div>
+
+      <div class="contact-card">
+        <h3>📞 Direct Contact & Orders</h3>
+        <p style="color: var(--text-muted); margin-top: 6px;">Call or send a message directly to our official line:</p>
+        
+        <a href="tel:+2348000000000" id="callLink" class="contact-btn btn-call">
+          📞 Call +234 800 000 0000
+        </a>
+        <a href="https://wa.me/2348000000000" id="waLink" target="_blank" class="contact-btn" style="background: var(--whatsapp-green); color: #fff;">
+          💬 Chat on WhatsApp
+        </a>
+      </div>
+
+      <div class="contact-card">
+        <h3>🕒 Opening Hours</h3>
+        <p style="color: var(--text-muted); margin-top: 6px;">Monday – Sunday: 10:00 AM – 11:00 PM</p>
+      </div>
+    </section>
+
   </div>
 
-  <!-- Cart Modal -->
+  <!-- Cart Drawer Modal -->
   <div class="modal-overlay" id="cartModal">
     <div class="drawer">
       <div class="drawer-header">
-        <h3>Your Order</h3>
+        <h3>Your Cart</h3>
         <button class="close-btn" onclick="toggleCart()">&times;</button>
       </div>
       <div class="cart-items" id="cartItems"></div>
@@ -498,39 +535,48 @@
     </div>
   </div>
 
-  <!-- Navigation Bar -->
+  <!-- Prominent Bottom Navigation Bar -->
   <nav class="nav-bar">
     <button class="nav-item active" id="navMenu" onclick="switchView('menu')">
+      <span style="font-size: 1.2rem;">📖</span>
       <span>Menu</span>
     </button>
     <button class="nav-item" id="navRes" onclick="switchView('reservation')">
-      <span>Reservations</span>
+      <span style="font-size: 1.2rem;">🍽️</span>
+      <span>Reserve</span>
+    </button>
+    <button class="nav-item" id="navContact" onclick="switchView('contact')">
+      <span style="font-size: 1.2rem;">📍</span>
+      <span>Contact</span>
     </button>
   </nav>
 
   <script>
-    // Configuration: Replace with Billion Bistro's official WhatsApp number (e.g., 2348012345678)
+    // Official Billion Bistro Phone Number Variable
     const RESTAURANT_PHONE = "2348000000000";
 
-    // Detailed Menu Items
     const menuData = [
-      { id: 1, name: "Cajun Seafood Pasta", category: "Pastas", price: 13500, desc: "Creamy fettuccine served with juicy jumbo prawns, calamari, and garlic herb butter." },
-      { id: 2, name: "Creamy Chicken Alfredo", category: "Pastas", price: 9500, desc: "Classic Alfredo pasta cooked with grilled chicken strips and aged Parmesan cheese." },
-      { id: 3, name: "Spaghetti Spicy Arrabbiata", category: "Pastas", price: 7500, desc: "Al dente pasta tossed in rich basil tomato sauce with a chili kick." },
-      { id: 4, name: "Grilled Ribeye Steak", category: "Grill", price: 19500, desc: "Prime steak cut grilled to perfection with mushroom sauce and potato wedges." },
-      { id: 5, name: "Peppered Turkey & Yam Chips", category: "Grill", price: 10500, desc: "Deep-fried spiced turkey tossed in pepper sauce, served with crisp yam chips." },
-      { id: 6, name: "Billion Suya Platter", category: "Grill", price: 12000, desc: "Grilled tender beef suya, chicken suya, roasted onions, and cabbage." },
-      { id: 7, name: "Chef Billion Special Burger", category: "Fast Bites", price: 8000, desc: "Double beef patty, crispy bacon, cheddar, house sauce, served with french fries." },
-      { id: 8, name: "Signature Asun Roll Wrap", category: "Fast Bites", price: 6500, desc: "Spiced peppered goat meat wrapped in tortilla bread with fresh coleslaw." },
-      { id: 9, name: "Crispy Garlic Wings", category: "Fast Bites", price: 7000, desc: "6 pieces of deep-fried chicken wings tossed in garlic honey glaze." },
-      { id: 10, name: "Tropical Passion Mocktail", category: "Drinks", price: 4500, desc: "A refreshing blend of passion fruit, fresh lime juice, mint leaves, and soda." },
-      { id: 11, name: "Biscoff Milkshake", category: "Drinks", price: 5500, desc: "Rich Lotus Biscoff spread blended with vanilla bean ice cream and whipped cream." },
-      { id: 12, name: "Triple Chocolate Sundae", category: "Desserts", price: 4500, desc: "Chocolate brownie fudge topped with vanilla scoops and warm chocolate sauce." }
+      { id: 1, name: "Cajun Seafood Pasta", category: "Pastas", price: 13500, desc: "Creamy fettuccine with jumbo prawns, calamari, and garlic herb butter." },
+      { id: 2, name: "Creamy Chicken Alfredo", category: "Pastas", price: 9500, desc: "Fettuccine in garlic Parmesan cream sauce with grilled chicken." },
+      { id: 3, name: "Spaghetti Spicy Arrabbiata", category: "Pastas", price: 7500, desc: "Al dente pasta tossed in spicy tomato basil ragu." },
+      { id: 4, name: "Grilled Ribeye Steak", category: "Grill", price: 19500, desc: "Prime ribeye steak served with pepper sauce and potato wedges." },
+      { id: 5, name: "Peppered Turkey & Yam Chips", category: "Grill", price: 10500, desc: "Deep-fried spiced turkey served with crisp golden yam chips." },
+      { id: 6, name: "Billion Suya Platter", category: "Grill", price: 12000, desc: "Grilled beef suya, chicken suya, roasted onions, and cabbage." },
+      { id: 7, name: "Chef Billion Special Burger", category: "Fast Bites", price: 8000, desc: "Double beef patty, cheddar, house sauce, with seasoned fries." },
+      { id: 8, name: "Signature Asun Roll Wrap", category: "Fast Bites", price: 6500, desc: "Spiced peppered goat meat wrapped in tortilla bread." },
+      { id: 9, name: "Crispy Garlic Wings", category: "Fast Bites", price: 7000, desc: "6 pieces of deep-fried chicken wings with garlic honey glaze." },
+      { id: 10, name: "Tropical Passion Mocktail", category: "Drinks", price: 4500, desc: "Passion fruit blend with lime juice, mint leaves, and soda." },
+      { id: 11, name: "Biscoff Milkshake", category: "Drinks", price: 5500, desc: "Lotus Biscoff blended with vanilla ice cream and whipped cream." },
+      { id: 12, name: "Triple Chocolate Sundae", category: "Desserts", price: 4500, desc: "Fudge brownie with vanilla scoops and warm chocolate sauce." }
     ];
 
     let cart = [];
 
     function init() {
+      // Update Contact Tab Links with Phone
+      document.getElementById('callLink').href = `tel:+${RESTAURANT_PHONE}`;
+      document.getElementById('waLink').href = `https://wa.me/${RESTAURANT_PHONE}`;
+      
       renderCategories();
       renderMenu('All');
     }
@@ -624,9 +670,11 @@
     function switchView(view) {
       document.getElementById('menuView').classList.toggle('hidden', view !== 'menu');
       document.getElementById('reservationView').classList.toggle('hidden', view !== 'reservation');
+      document.getElementById('contactView').classList.toggle('hidden', view !== 'contact');
       
       document.getElementById('navMenu').classList.toggle('active', view === 'menu');
       document.getElementById('navRes').classList.toggle('active', view === 'reservation');
+      document.getElementById('navContact').classList.toggle('active', view === 'contact');
     }
 
     function checkoutWhatsApp() {

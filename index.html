@@ -118,7 +118,7 @@
       padding: 20px;
     }
 
-    /* Prominent Top Filter Tabs */
+    /* Top Filter Categories */
     .categories {
       display: flex;
       gap: 10px;
@@ -324,7 +324,7 @@
       font-size: 1rem;
     }
 
-    /* Highly Visible Bottom Navigation Tabs */
+    /* Prominent Bottom Navigation Bar */
     .nav-bar {
       position: fixed;
       bottom: 0;
@@ -501,10 +501,10 @@
         <h3>📞 Direct Contact & Orders</h3>
         <p style="color: var(--text-muted); margin-top: 6px;">Call or send a message directly to our official line:</p>
         
-        <a href="tel:+2348000000000" id="callLink" class="contact-btn btn-call">
-          📞 Call +234 800 000 0000
+        <a href="tel:+2347025555783" id="callLink" class="contact-btn btn-call">
+          📞 Call 07025555783
         </a>
-        <a href="https://wa.me/2348000000000" id="waLink" target="_blank" class="contact-btn" style="background: var(--whatsapp-green); color: #fff;">
+        <a href="https://wa.me/2347025555783" id="waLink" target="_blank" class="contact-btn" style="background: var(--whatsapp-green); color: #fff;">
           💬 Chat on WhatsApp
         </a>
       </div>
@@ -535,7 +535,7 @@
     </div>
   </div>
 
-  <!-- Prominent Bottom Navigation Bar -->
+  <!-- Bottom Navigation Bar -->
   <nav class="nav-bar">
     <button class="nav-item active" id="navMenu" onclick="switchView('menu')">
       <span style="font-size: 1.2rem;">📖</span>
@@ -552,8 +552,8 @@
   </nav>
 
   <script>
-    // Official Billion Bistro Phone Number Variable
-    const RESTAURANT_PHONE = "2348000000000";
+    // Exact Billion Bistro Phone Number Configuration
+    const RESTAURANT_PHONE = "2347025555783";
 
     const menuData = [
       { id: 1, name: "Cajun Seafood Pasta", category: "Pastas", price: 13500, desc: "Creamy fettuccine with jumbo prawns, calamari, and garlic herb butter." },
@@ -573,7 +573,6 @@
     let cart = [];
 
     function init() {
-      // Update Contact Tab Links with Phone
       document.getElementById('callLink').href = `tel:+${RESTAURANT_PHONE}`;
       document.getElementById('waLink').href = `https://wa.me/${RESTAURANT_PHONE}`;
       
